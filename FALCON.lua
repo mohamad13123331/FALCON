@@ -1,7 +1,7 @@
 --[[
---=> تمت برمجة السورس وتطويره
---==>> بواسطة @TAHAJ20 <<==
--- للمزيد من المعلومات قناتنا @STORMCLI
+⋨ تمت برمجة السورس وتطويره
+⋨ بواسطة @ssccss ⋩
+-- للمزيد من المعلومات قناتنا @Falconcli
 --]]
 redis = require('redis') taha = dofile('./JSON.lua')  json = dofile('./JSON.lua')  URL = require('socket.url')  HTTPS = require ("ssl.https")  https = require ("ssl.https") http  = require ("socket.http") serpent = require("serpent") tahadevstorm = redis.connect('127.0.0.1', 6379)
 function vardump(value)  print(serpent.block(value, {comment=false}))  end local AutoSet = function()
