@@ -22,5 +22,5 @@ echo ""
 echo ""
 exit 1
 fi
-./tg -s STORM.lua
+./tg -s FALCON.lua
 fi
