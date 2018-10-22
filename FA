@@ -1,0 +1,3 @@
+killall screen
+screen ./FALCON.sh
+echo -e "FALCON IS RUN BOT"
