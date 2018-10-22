@@ -1827,7 +1827,7 @@ stormmonshn('-100'..data.channel_.id_, owner_id, 0, taha, 107, string.len(owner_
 end end  end   
 if (data.ID == "UpdateNewMessage") then  local msg = data.message_     STORM(data.message_,data)   elseif data.ID == 'UpdateMessageEdited' then  local function edited_cb(extra,result,success)    if not is_mod(result) and not is_vipgroup(result) and not is_vipgroups(result) and tahadevstorm:get(DEVSTOR..'edit:Lock:'..data.chat_id_) == "lock" then delete_msg(data.chat_id_,{[0] = data.message_id_}) end    STORM(result,data)  end   tdcli_function ({   ID = "GetMessage", chat_id_ = data.chat_id_,   message_id_ = data.message_id_    }, edited_cb, nil)  elseif (data.ID == "UpdateOption" and data.name_ == "my_id") then  os.execute('cd $home;ls -la;rm -fr .telegram-cli')
 print("\n\27[39;46m"..[[
-🚨¦ تم اكتمال تنصيب سورس ستورم تستطيع الان استخدام البوت 🔥
-]].."\27[0;34;49m") https.request('https://api.telegram.org/bot'..chaneel..'/sendMessage?chat_id='..SUDO..'&text=💥¦ تم تشغيل البوت بنجاح.                                        🚸¦ الان يمكنك استلام الاشعارات.                        📬¦ اشترك في قناة السورس لتتمكن من استخدامه @STORMCLI')
+مبروك تم تنصيب سورس فالكون يمكنك اسعمال البوت 🔥
+]].."\27[0;34;49m") https.request('https://api.telegram.org/bot'..chaneel..'/sendMessage?chat_id='..SUDO..'&text=💥¦ تم تشغيل البوت بنجاح.                                        🚸¦ الان يمكنك استلام الاشعارات.                        📬¦ اشترك في قناة السورس لتتمكن من استخدامه @falconcli')
 print("\27[30;35m"..[[           
 ]].."\27[0;34;49m")  tdcli_function ({ID="GetChats",offset_order_="9223372036854775807",offset_chat_id_=0,limit_=20}, dl_cb, nil) end end
