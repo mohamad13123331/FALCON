@@ -1,7 +1,7 @@
 --[[
 --=> تمت برمجة السورس وتطويره
---=> بواسطة @boos_theep <<==
--- للمزيد من المعلومات قناتنا @boos_theep
+--=> بواسطة @ssccss <<==
+-- للمزيد من المعلومات قناتنا @falconcli
 --]]
 redis = require('redis') taha = dofile('./JSON.lua')  json = dofile('./JSON.lua')  URL = require('socket.url')  HTTPS = require ("ssl.https")  https = require ("ssl.https") http  = require ("socket.http") serpent = require("serpent") tahadevstorm = redis.connect('127.0.0.1', 6379)
 function vardump(value)  print(serpent.block(value, {comment=false}))  end local AutoSet = function()
@@ -32,7 +32,7 @@ echo -e "FALCON IS RUN BOT"
 file = io.open("FALCON.sh", "w")  file:write([[
 token="]]..token..[["
 ./tg -s ./FALCON.lua $@ --bot=$token
-]])  file:close() os.execute('cd $home;ls -la;rm -fr .telegram-cli') os.execute('screen ./FALCON.sh') end local serialize_to_file = function(data, file, uglify)  file = io.open(file, "w+")  local serialized  if not uglify then   serialized = serpent.block(data, {comment = false, name = "_"})  else   serialized = serpent.dump(data) end  file:write(serialized)  file:close() end local load_tahadevstorm = function()  local f = io.open("./config.lua", "r")  if not f then   AutoSet()  else   f:close()  end  local config = loadfile("./config.lua")() return config end  _tahadevstorm = load_tahadevstorm()  sudos = dofile("config.lua") SUDO = sudos.SUDO sudo_users = {sudos.SUDO} BOTS = sudos.bot_id bot_id = sudos.bot_id  BOTS = sudos.bot_id  DEVSTOR = sudos.bot_id  botname = (sudos.botname or tahadevstorm:get(DEVSTOR..'falcon:name'))  sudouser = sudos.sudouser chaneel = sudos.token chdev = '@jjlly' chdeva = '*⚜¦* لا تستطيع استخدام البوت 🍁\n*💠¦* عليك الاشتراك في قناة البوت\n*⚡¦* القناة 👈 ' function dl_cb(arg, data) end 
+]])  file:close() os.execute('cd $home;ls -la;rm -fr .telegram-cli') os.execute('screen ./FALCON.sh') end local serialize_to_file = function(data, file, uglify)  file = io.open(file, "w+")  local serialized  if not uglify then   serialized = serpent.block(data, {comment = false, name = "_"})  else   serialized = serpent.dump(data) end  file:write(serialized)  file:close() end local load_tahadevstorm = function()  local f = io.open("./config.lua", "r")  if not f then   AutoSet()  else   f:close()  end  local config = loadfile("./config.lua")() return config end  _tahadevstorm = load_tahadevstorm()  sudos = dofile("config.lua") SUDO = sudos.SUDO sudo_users = {sudos.SUDO} BOTS = sudos.bot_id bot_id = sudos.bot_id  BOTS = sudos.bot_id  DEVSTOR = sudos.bot_id  botname = (sudos.botname or tahadevstorm:get(DEVSTOR..'falcon:name'))  sudouser = sudos.sudouser chaneel = sudos.token chdev = '@falconcli' chdeva = '*⚜¦* لا تستطيع استخدام البوت 🍁\n*💠¦* عليك الاشتراك في قناة البوت\n*⚡¦* القناة 👈 ' function dl_cb(arg, data) end 
 function is_devtaha(msg) local ta = false for k,v in pairs(sudo_users) do if msg.sender_user_id_ == v then ta = true end end return ta end 
 function is_sudo(msg) local hash = tahadevstorm:sismember(DEVSTOR..'sudo:bot',msg.sender_user_id_)  if hash or is_devtaha(msg)  then  return true  else  return false  end  end
 function is_bot(msg) if tonumber(BOTS) == BOTS then return true else return false end end 
