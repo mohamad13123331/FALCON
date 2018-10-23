@@ -1197,26 +1197,42 @@ local text = [[
  ]]  storm_sendMsg(msg.chat_id_, msg.id_, 1, text, 1, 'md')  end end end
 if text == 'السورس' or text =='سورس' or text=='يا سورس' then
 local text = [[
-*🚨¦ اهلا بك في سورس ستورم 🍃*
-——————༻🚨༺——————
-*🚸¦ لتنصيب السورس اتبع مايلي*
-*⚀¦ افتح ترمنال جديد *
-*⚁¦* اضغط على 👇 الرابط ليتم نسخه
-*⚂¦* الصق الرابط في الترمنال ثم انتر
+🛡∫ اهلا بك في سورس فالكون 
+
+⊰▸-ـ-ـ-ـ-ـ-ـ-ـ-ـ-ـ-ـ-ـ-ـ-ـ-ـ-ـ-ـ-ـ-ـ-ـ-ـ-ـ-ـ-ـ-ـ-ـ-ـ-◂⊱
+
+≼🚸≽ لتنصيب السورس 
+
+≼⚁≽ اضغط على 👇 الرابط ليتم نسخه
+
+≼⚂≽ الصق الرابط في الترمنال ثم انتر
+
 `git clone https://github.com/mohamad13123331/FALCON.git ;cd FALCON;chmod +x tg;chmod +x FALCON.sh;chmod +x FA;./FALCON.sh`
-ـــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
-*⚃¦ راح يطلب معلومات منك*
-*📬¦* بعد كل امر اضغط انتر
-*📛¦* ايدي المطور الاساسي
-*📛¦* معرف المطور الاساسي
-*📛¦* توكن البوت
-*📛¦* اسم للبوت
-*📬¦* كود الرن  👇
+
+⊰▸-ـ-ـ-ـ-ـ-ـ-ـ-ـ-ـ-ـ-ـ-ـ-ـ-ـ-ـ-ـ-ـ-ـ-ـ-ـ-ـ-ـ-ـ-ـ-ـ-ـ-◂⊱
+
+≼⚃≽ راح يطلب معلومات منك
+
+≼📛≽ ايدي المطور الاساسي
+
+≼📛≽ معرف المطور الاساسي
+
+≼📛≽ توكن البوت
+
+≼📛≽ اسم للبوت
+
+≼📬≽ كود الرن  👇
+
 `cd FALCON;./FA`
-——————༻🚨༺——————
-*⚜¦* للمزيد من المعلومات راسلنا
-*🗯¦* مطور البوت ◗[@]]..sudouser..[[]◖
-*📯¦* قناتنا @STORMCLI
+
+     ملاحظه :- عنده تنصيب السورس سيكون الرن تلقائي
+⊰▸-ـ-ـ-ـ-ـ-ـ-ـ-ـ-ـ-ـ-ـ-ـ-ـ-ـ-ـ-ـ-ـ-ـ-ـ-ـ-ـ-ـ-ـ-ـ-ـ-ـ-◂⊱
+
+≼⚜≽ للمزيد من المعلومات راسلنا
+
+≼🗯≽ مطور البوت ◗[@]]..sudouser..[[]◖
+
+≼✡≽ قناتنا @falconcli
 ]] storm_sendMsg(msg.chat_id_, msg.id_, 1,text, 1, 'md')   end
 if text == 'تفعيل'  and is_sudo(msg) then   
 if not is_sudo(msg) then
@@ -1298,8 +1314,8 @@ if text == 'الغاء تقيد' and tahadevstorm:get(DEVSTOR.."add:bot:group"..
 if text and text:match('^الغاء تقيد @(.*)') and is_mod(msg) then  local username = text:match('الغاء تقيد @(.*)') function keduser(extra,result,success)  if result.id_ then if not msg.can_be_deleted_ == true then storm_sendMsg(msg.chat_id_, msg.id_, 1, "*🚨¦* تنبيــه انا لست ادمن يرجى ترقيتي ادمن هنا 👮\n", 1, "md") else HTTPS.request("https://api.telegram.org/bot" .. chaneel .. "/restrictChatMember?chat_id=" ..msg.chat_id_.. "&user_id=" ..result.id_.. "&can_send_messages=True&can_send_media_messages=True&can_send_other_messages=True&can_add_web_page_previews=True")  tahadevstorm:srem(DEVSTOR..'tedmembars'..msg.chat_id_,result.id_) tahadevstorm:srem(DEVSTOR.."keed", msg.chat_id_)  zo = '*◗📛¦* العضــو [ @'..username..' ]\n*◗💠¦ الايــدي { '..result.id_..' }*\n*◗📬¦* تـم الغاء تقييـده بنجـاح'    storm_sendMsg(msg.chat_id_, msg.id_, 1, zo, 1, 'md')  end end end  saddbyusername(username,keduser) end
 if text and text:match('^الغاء تقيد (%d+)') and is_mod(msg) then local user = text:match('الغاء تقيد (%d+)') function bot_kick(extra, result, success) username = ''..(result.username_ or ' لم يضع معرف ✨')..'' if not msg.can_be_deleted_ == true then storm_sendMsg(msg.chat_id_, msg.id_, 1, "*🚨¦* تنبيــه انا لست ادمن يرجى ترقيتي ادمن هنا 👮\n", 1, "md") else HTTPS.request("https://api.telegram.org/bot" .. chaneel .. "/restrictChatMember?chat_id=" ..msg.chat_id_.. "&user_id=" ..user.. "&can_send_messages=True&can_send_media_messages=True&can_send_other_messages=True&can_add_web_page_previews=True")  tahadevstorm:srem(DEVSTOR..'tedmembars'..msg.chat_id_,user) tahadevstorm:srem(DEVSTOR.."keed", msg.chat_id_)  zo = '*◗📛¦* العضــو [ @'..username..' ]\n*◗💠¦ الايــدي { '..user..' }*\n*◗📬¦* تـم الغاء تقييـده بنجـاح' tahadevstorm:srem(DEVSTOR.."keed", msg.chat_id_)  storm_sendMsg(msg.chat_id_, msg.id_, 1,zo, 1, 'md') end  end getUser(user, bot_kick) end
 if text ==('المقيدين') and is_mod(msg) then    local list = tahadevstorm:smembers(DEVSTOR..'tedmembars'..msg.chat_id_) local t = '*📊¦ قائمه مقيدين المجموعه 🍂*\n*ـــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*\n'  for k, v in pairs(list) do  if tahadevstorm:hget('users:'..v, 'uname') then t = t..'*◖'..k.."◗➣* [" ..get_username(v).."]\n"  else  t = t..'*◖'..k.."◗➣* `" ..(v).."`\n"  end  end if #list == 0 then t = '*📬¦* لا يوجد مقيدين في المجموعه' end storm_sendMsg(msg.chat_id_, msg.id_, 1,t, 1, 'md') end
-if text == ""..(tahadevstorm:get(DEVSTOR..'storm:name') or 'ستورم').." هينه" or text == ""..(''..botname..'').." هينه" then function necha(extra, result, success) if tonumber(result.sender_user_id_) == tonumber(bot_id) then  storm_sendMsg(msg.chat_id_, msg.id_, 1, 'يول شو تمسلت اكو واحد يهين نفسه 😒', 1, 'md')  return false  end  if tonumber(result.sender_user_id_) == tonumber(SUDO) then  storm_sendMsg(msg.chat_id_, msg.id_, 1, 'شو انت تمضرط تريد اهين تاج راسي مثلا ?', 1, 'md')  return false  end local text = "تدلل حياتي" storm_sendMsg(msg.chat_id_, msg.id_, 1,text, 1, 'md') local taha = { "تعال لك كواد فرخ دودكي مستنقع 😹👻","لك حيوان اهينك بل بسطال ","لك حبي اكعد راحه ولتندك باسيادك","خاب انجب لا اهينك هسه "} storm_sendMsg(msg.chat_id_, result.id_, 1,''..taha[math.random(#taha)]..'', 1, 'md') end if tonumber(msg.reply_to_message_id_) == 0 then else getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),necha)   end end
-if text ==  ""..(tahadevstorm:get(DEVSTOR..'storm:name') or 'ستورم').." بوسه" or text == ""..(''..botname..'').." بوسه"  then function necha(extra, result, success) local taha = {"خلي يزحفلي وابوسه 😻",'يعني كل شويه ابوسه كافي 😒','اخ ممممح من الحلكك ولك '..get_name(msg.sender_user_id_)..'','ما ابوسه والله زاحف هاذا','اخ يفدوا مممح 💚' } storm_sendMsg(msg.chat_id_, result.id_, 1,''..taha[math.random(#taha)]..'', 1, 'md') end if tonumber(msg.reply_to_message_id_) == 0 then else getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),necha)   end end
+if text == ""..(tahadevstorm:get(DEVSTOR..'storm:name') or 'فالكون').." هينه" or text == ""..(''..botname..'').." هينه" then function necha(extra, result, success) if tonumber(result.sender_user_id_) == tonumber(bot_id) then  storm_sendMsg(msg.chat_id_, msg.id_, 1, 'يول شو تمسلت اكو واحد يهين نفسه 😒', 1, 'md')  return false  end  if tonumber(result.sender_user_id_) == tonumber(SUDO) then  storm_sendMsg(msg.chat_id_, msg.id_, 1, 'شو انت تمضرط تريد اهين تاج راسي مثلا ?', 1, 'md')  return false  end local text = "تدلل حياتي" storm_sendMsg(msg.chat_id_, msg.id_, 1,text, 1, 'md') local taha = { "تعال لك كواد فرخ دودكي مستنقع 😹👻","لك حيوان اهينك بل بسطال ","لك حبي اكعد راحه ولتندك باسيادك","خاب انجب لا اهينك هسه "} storm_sendMsg(msg.chat_id_, result.id_, 1,''..taha[math.random(#taha)]..'', 1, 'md') end if tonumber(msg.reply_to_message_id_) == 0 then else getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),necha)   end end
+if text ==  ""..(tahadevstorm:get(DEVSTOR..'storm:name') or 'فالكون').." بوسه" or text == ""..(''..botname..'').." بوسه"  then function necha(extra, result, success) local taha = {"خلي يزحفلي وابوسه 😻",'يعني كل شويه ابوسه كافي 😒','اخ ممممح من الحلكك ولك '..get_name(msg.sender_user_id_)..'','ما ابوسه والله زاحف هاذا','اخ يفدوا مممح 💚' } storm_sendMsg(msg.chat_id_, result.id_, 1,''..taha[math.random(#taha)]..'', 1, 'md') end if tonumber(msg.reply_to_message_id_) == 0 then else getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),necha)   end end
 if text and text:match('^غادر (-%d+)')  and is_sudo(msg) then gp = text:match('غادر (-%d+)') tahadevstorm:srem(DEVSTOR..'bot:gps', gp) tahadevstorm:srem(DEVSTOR..'bot:gpsby:id', gp) tahadevstorm:srem(DEVSTOR.."botgps",gp) tahadevstorm:del(DEVSTOR..'mod:'..gp) tahadevstorm:del(DEVSTOR..'moder'..gp) tahadevstorm:del(DEVSTOR..'banned:'..gp) tahadevstorm:del(DEVSTOR.."add:bot:group"..gp) tahadevstorm:del(DEVSTOR.."setmoder:"..gp) tahadevstorm:del(DEVSTOR.."gps:settings:"..gp) tahadevstorm:del(DEVSTOR.."gps:settings:"..gp) storm_sendMsg(text:match('غادر (-%d+)'), 0, 1,'💢*¦*تم مغادره البوت من المجموعه \n♨*¦*الامر بواسطه مطور البوت \n 📪*¦*للاستفسار راسل مطور البوت ', 1, 'md') changeChatMemberStatus(text:match('غادر (-%d+)'), bot_id, "Left") storm_sendMsg(msg.chat_id_, msg.id_, 1,'📬*¦*تم ازاله المجموعه من مجموعات البوت بنجاح ✔ ', 1, 'md') end if tonumber(msg.reply_to_message_id_) > 0 then
 if text ==("مسح") and is_mod(msg) then delete_msg(msg.chat_id_,{[0] = tonumber(msg.reply_to_message_id_),msg.id_})   end   end
 if text ==('تفعيل الترحيب') and is_mod(msg) then tahadevstorm:set(DEVSTOR..'add:welc:'..msg.chat_id_,'add') storm_sendMsg(msg.chat_id_, msg.id_, 1,'💥*¦*  تم تفعيل الترحيب', 1, 'md') end
